@@ -1,4 +1,4 @@
-# Adapter-LoRa for Quantization  
+# Adapter-LoRa Beta Version for Quantization  
 
 <div align="center">
   <img src="assets/LoRa.png" alt="LoRa-Logo" width="200">
@@ -8,6 +8,31 @@
 [![GitHub forks](https://img.shields.io/github/forks/kyegomez/Med-Palm)](https://github.com/youness-elbrag/AdapterLoRa/network) 
 [![GitHub stars](https://img.shields.io/github/stars/kyegomez/Med-Palm)](https://github.com/youness-elbrag/AdapterLoRa/stargazers) [![GitHub license](https://img.shields.io/github/license/youness-elbrag/AdapterLoRa)](https://github.com/youness-elbrag/AdapterLoRa/blob/master/LICENSE)
 </div>
+
+### Comming Features
+To Support LLM model in Effiencey way the comming Feature will make the Library Easy-to Friendly such PFFT Hugging Face 
+
+- [x] LoRaConfig
+- [x] Quantize specific Layer
+- [x] Adujst The Hyper-Paramaters Already instance by Origin Model 
+
+**Usage** 
+
+```python
+
+LoRaConfig = AdapterLoRA.LoRaConfig(
+            method = "LoRa",
+            Rank = 4,
+            Instance_Layer = "auto",
+            layertyep = ["nn.Lieaner","nn.Embedding"],
+            LORA = True,
+            BITSAND = False,
+            bit8_int = True
+)
+
+Adpate_model = AdapterLoRa(model , Config=LoRaConfig, device="cuda")
+
+```
 
 
 ## Features
